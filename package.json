@@ -1,7 +1,7 @@
 {
-	"name": "prettier-plugin-sort-imports",
+	"name": "prettier-plugin-ascending-imports",
 	"version": "1.0.0",
-	"description": "A prettier plugin for sorting imports by length",
+	"description": "A prettier plugin for sorting imports by length in ascending order",
 	"main": "dist/index.js",
 	"repository": "https://github.com/ccencisoj/prettier-plugin-ascending-imports",
 	"author": "Cristian Enciso <ccencisoj@gmail.com>",
@@ -25,14 +25,8 @@
 		"dist/**"
 	],
 	"scripts": {
-		"prepublish": "yarn prepack",
-		"bundle": "yarn bundle:dev --minify",
-		"bundle:dev": "esbuild --bundle --platform=node --external:typescript --external:prettier --outfile=dist/index.js app/index.ts",
-		"test": "yarn bundle:dev && ava test/test.ts -- -- --sort-imports-reinit",
-		"test:dev": "ava test/test.ts -- -- --dev --sort-imports-reinit",
-		"prepack": "yarn format && tsc && yarn bundle",
-		"format": "prettier --write app test",
-		"codeGenerationTest": "ts-node -T test/codeGenerationTest.ts --test"
+		"build": "npm run build:dev --minify",
+		"build:dev": "esbuild --bundle --platform=node --external:typescript --external:prettier --outfile=dist/index.js app/index.ts"
 	},
 	"ava": {
 		"extensions": [
