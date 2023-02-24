@@ -1,6 +1,6 @@
 {
 	"name": "prettier-plugin-ascending-imports",
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"description": "A prettier plugin for sorting imports by length in ascending order",
 	"main": "dist/index.js",
 	"repository": "https://github.com/ccencisoj/prettier-plugin-ascending-imports",
