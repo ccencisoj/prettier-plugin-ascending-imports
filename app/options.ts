@@ -86,7 +86,7 @@ export const options: {
 		since: '1.15.0',
 		category: 'Global',
 		type: 'choice',
-		default: SORTING_ORDER.DESCENDING,
+		default: SORTING_ORDER.ASCENDING,
 		description: 'Which sorting order to use',
 		choices: [
 			{
